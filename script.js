@@ -18,8 +18,10 @@ function getMoney(currentAmount, newAmount) {
 }
 
 function deposit() {
-  const totalBalance = addMoney(depositOutput.innerText, depositValue.value);
-  depositOutput.innerText = totalBalance;
+  const totalDeposit = addMoney(depositOutput.innerText, depositValue.value);
+  depositOutput.innerText = totalDeposit;
+
+  const totalBalance = addMoney(balanceOutput.innerText, depositValue.value);
   balanceOutput.innerText = totalBalance;
 
   depositValue.value = "";
